@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import urllib.request
 from optparse import OptionParser
 import urllib.parse
