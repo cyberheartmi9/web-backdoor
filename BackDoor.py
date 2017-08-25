@@ -39,7 +39,7 @@ __      _____| |__   | |_/ / __ _  ___| | ____| | ___   ___  _ __
 -g    , --generate          generate webshell
 
 
- usge                                          
+ usage                                          
 ./BackDoor.py -u http://127.0.0.1
 ./BackDoor.py -g shell
 ./BackDoor.py --url http://127.0.0.1
