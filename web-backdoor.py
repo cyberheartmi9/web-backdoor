@@ -43,10 +43,10 @@ __      _____| |__   | |_/ / __ _  ___| | ____| | ___   ___  _ __
 
 
  usge                                          
-./BackDoor.py -u http://127.0.0.1
-./BackDoor.py -g shell
-./BackDoor.py --url http://127.0.0.1
-./BackDoor.py --generate shell
+./web-backdoor.py -u http://127.0.0.1
+./web-backdoor.py -g shell
+./web-backdoor.py --url http://127.0.0.1
+./web-backdoor.py --generate shell
 
 [ @intx0x80 ]
 
