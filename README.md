@@ -3,6 +3,10 @@
 
 
 
+![alt text](https://github.com/cyberheartmi9/web-backdoor/blob/master/web1.PNG)
+
+![alt text](https://github.com/cyberheartmi9/web-backdoor/blob/master/web2.PNG)
+
 
                                                                   
                                                                   
@@ -22,7 +26,3 @@
 # [ @intx0x80 ]
 
 
-
-![alt text](https://github.com/cyberheartmi9/web-backdoor/blob/master/webshell.PNG)
-
-![alt text](https://github.com/cyberheartmi9/web-backdoor/blob/master/webshell3.PNG)
