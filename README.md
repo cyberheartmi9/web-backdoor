@@ -10,7 +10,7 @@
 
                                                                   
  # platform : Python3                                           
-<p>  ./BackDoor.py [options]
+<p>  ./web-backdoor.py  [options]
 
 [options]
 
