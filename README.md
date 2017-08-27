@@ -18,7 +18,7 @@
 -g    , --generate          generate webshell
 
 
- usge                                          
+ usage                                          
 # ./web-backdoor.py  -u http://127.0.0.1/shell.php
 # ./web-backdoor.py  -g shell
 # ./web-backdoor.py  --url http://127.0.0.1/shell.php
