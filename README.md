@@ -14,12 +14,12 @@
 
 [options]
 
--u    ,   --url   :         url for uploaded shell
--g    , --generate          generate webshell
+<p> -u    ,   --url   :         url for uploaded shell
+<p>  -g    , --generate          generate webshell
 
 
  usage                                          
-# ./web-backdoor.py  -u http://127.0.0.1/shell.php
+<p>  ./web-backdoor.py  -u http://127.0.0.1/shell.php
 # ./web-backdoor.py  -g shell
 # ./web-backdoor.py  --url http://127.0.0.1/shell.php
 # ./web-backdoor.py  --generate shell
