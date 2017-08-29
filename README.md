@@ -5,6 +5,15 @@
 
 ![alt text](https://github.com/cyberheartmi9/web-backdoor/blob/master/screenshoot/WWWEB.PNG)
 
+# generate shell
+<p>  ./web-backdoor.py -g shell
+
+![alt text](https://github.com/cyberheartmi9/web-backdoor/blob/master/screenshoot/WWWEB3.PNG)
+
+# run shell 
+
+<p>  ./web-backdoor.py  -u http://127.0.0.1/shell.php
+
 ![alt text](https://github.com/cyberheartmi9/web-backdoor/blob/master/screenshoot/WWWEB2.PNG)
 
 
