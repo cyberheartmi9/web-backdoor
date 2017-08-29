@@ -3,9 +3,9 @@
 
 
 
-![alt text](https://github.com/cyberheartmi9/web-backdoor/blob/master/WWWEB.PNG)
+![alt text](https://github.com/cyberheartmi9/web-backdoor/blob/master/screenshoot/WWWEB.PNG)
 
-![alt text](https://github.com/cyberheartmi9/web-backdoor/blob/master/WWWEB2.PNG)
+![alt text](https://github.com/cyberheartmi9/web-backdoor/blob/master/screenshoot/WWWEB2.PNG)
 
 
                                                                   
