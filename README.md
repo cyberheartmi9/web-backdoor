@@ -15,7 +15,7 @@
 <p>  ./web-backdoor.py  --url http://127.0.0.1/shell.php
 <p>  ./web-backdoor.py  --generate shell
 
-
+ <h2> platform : Python3</h2>
 
 ![alt text](https://github.com/cyberheartmi9/web-backdoor/blob/master/screenshoot/WWWEB.PNG)
 
@@ -37,7 +37,7 @@
 
 
                                                                   
- # platform : Python3                                           
+                                           
 <h1> [ @intx0x80 ]
 
 
